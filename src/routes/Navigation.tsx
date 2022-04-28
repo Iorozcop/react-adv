@@ -29,7 +29,7 @@ export const Navigation = () => {
                 {/* en el .map hemos destructurado de cada element lo que necesitamos */}
                 {routes.map(({to, path, Component}) => 
                   <Route
-                  key={to} 
+                    key={to} 
                     path={path} 
                     element={ <Component /> } 
                   />
