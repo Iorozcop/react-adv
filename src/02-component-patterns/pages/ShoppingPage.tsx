@@ -2,6 +2,7 @@ import { ProductCard } from '../components/ProductCard';
 import { ProductButtons } from '../components/ProductButtons';
 import { ProductTitle } from '../components/ProductTitle';
 import { ProductImage } from '../components/ProductImage';
+import '../styles/custom-styles.css';
 
 const product = {
   id: '1',
@@ -21,10 +22,24 @@ export const ShoppingPage = () => {
         </ProductCard>
 
         {/* Esta es una manera más limpia de hacerlo */}
-        <ProductCard product={ product } >
-          <ProductImage />
-          <ProductTitle title= 'Té' />
-          <ProductButtons />                 
+        <ProductCard 
+          product={ product }
+          className='bg-dark'
+        >
+          <ProductImage className='custom-image'/>
+          <ProductTitle title= 'Té' className='text-white' />
+          <ProductButtons className='custom-buttons'/>                 
+        </ProductCard>
+
+        <ProductCard 
+          product={ product }
+          style={{
+            backgroundColor: '#70D1F8'
+          }}
+        >
+          <ProductImage className='custom-image'/>
+          <ProductTitle title= 'Té' className='text-white' />
+          <ProductButtons className='custom-buttons'/>                 
         </ProductCard>
       </div>
     </div>
